@@ -1,0 +1,108 @@
+$themeColorWhite: #eee5d9;
+$themeColorBlack: rgb(16, 16, 16);
+
+* {
+    color: $themeColorWhite;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1530554764233-e79e16c91d08?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: 45% 100%;
+    background-color: $themeColorBlack;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.outer-container {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border: 3px solid;
+    border-radius: 20px;
+    width: 90%;
+    height: 80%;
+}
+
+.inner-container {
+    margin: 50px 80px;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+form {
+    .input-field input[type]:focus:not([readonly]) + label,
+    .input-field textarea:focus:not([readonly]) + label {
+        color: $themeColorWhite;
+        font-size: 1.5rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .input-field input[type]:focus:not([readonly]),
+    .input-field textarea:focus:not([readonly]) {
+        border-bottom: 1px solid;
+        box-shadow: 0 1px 0 0;
+    }
+
+    p {
+        color: $themeColorWhite;
+        text-align: center;
+    }
+
+    .dropdown {
+        margin-top: 0;
+    }
+}
+
+.select-wrapper {
+    .caret {
+        fill: $themeColorWhite !important;
+    }
+
+    input.select-dropdown:focus {
+        border-bottom: 1px solid $themeColorWhite;
+    }
+
+    .dropdown-content {
+        background-color: $themeColorBlack;
+    }
+
+    .dropdown-content li > span {
+        background-color: $themeColorBlack;
+        color: $themeColorWhite;
+    }
+
+    .dropdown-content li > span:hover {
+        background-color: $themeColorWhite;
+        color: $themeColorBlack;
+    }
+
+    img {
+        filter: brightness(0) invert(1);
+        width: 15px !important;
+        height: 15px !important;
+        margin: 20px 15px !important;
+    }
+
+    // img:hover {
+    //     filter: brightness(0%);
+    // }
+}
+
+.burger-list {
+    height: 250px;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    .btn,
+    .btn:hover {
+        background-color: transparent;
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,42 @@
+<h3>Eat-Da-Burger</h3>
+
+<section class="row">
+    <form class="col s8 add">
+        <section class="row">
+            <section class="input-field col s12">
+                <input id="burger" type="text" class="validate">
+                <label for="burger">Add New Burger</label>
+            </section>
+        </section>
+        <p>or</p>
+        <section class="row">
+            <section class="input-field col s12 dropdown">
+                <select>
+                    <option value="" disabled selected>Select A Burger</option>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <option value={{id}}
+                        data-icon="https://www.flaticon.com/svg/vstatic/svg/748/748122.svg?token=exp=1611643300~hmac=194f69f84b9d3d59d0ccb9911c4035f0"
+                        class="right">{{burger_name}}</option>
+                    {{/if}}
+                    {{/each}}
+                </select>
+            </section>
+        </section>
+    </form>
+</section>
+
+<section class="row burger-list">
+    <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li class="row">
+            <section class="name col s7">{{burger_name}}</section>
+            <button class="btn waves-effect waves-light devour" type="submit" name="devour" data-id={{id}}>
+                <i class="material-icons center">local_dining</i>
+            </button>
+        </li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</section>
