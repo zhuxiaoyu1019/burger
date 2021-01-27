@@ -17,11 +17,11 @@ This is a burger logger built with MySQL, Node, Express, Handlebars and a homema
 
 ## Deployed Application
 
-[Eat-Da-Burger]()
+[Eat-Da-Burger](https://burger-handlebars-mvc.herokuapp.com/)
 
 ## Usage
 
-![Eat-Da-Burger demo](./assets/)
+![Eat-Da-Burger demo](./public/assets/img/demo.gif)
 
 - Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
